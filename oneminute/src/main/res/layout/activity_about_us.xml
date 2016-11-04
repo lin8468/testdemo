@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_about_us"
+    android:layout_width="334dp"
+    android:layout_height="wrap_content"
+    tools:context="wonderful.com.oneminute.activity.AboutUsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/drawerlayout_about_us" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="关于我们"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="       我们是一个团结、有爱、互帮互助的小团队。从团队的刚开始组建，One Minute的构思诞生，再到整个One Minute的1.0版本团队的每一个成员都付出了很多汗水和努力。
+         One Minute的宗旨是让用户的每一分钟都更有意义，不浪费生命中的每一分钟和碎片时间。现在One Minute已经初步实现了我们的构思，接下来我们团队也会更加努力，不断的开发出更有意义、更具有特色的新功能，希望日后能给大家带来更好的体验和服务。"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TO BE CONTINUED"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</RelativeLayout>

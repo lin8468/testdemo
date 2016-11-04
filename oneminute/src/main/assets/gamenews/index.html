@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+    <title>新闻展示</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            
+        }
+        body,html{
+            width:100%;
+            height:100%;
+        }
+        #contain{
+            width:640px;
+            height:100%;
+            overflow: hidden;
+            display:-webkit-box;
+            -webkit-box-orient: vertical;
+        }
+        #title{
+            width:600px;
+            margin:0 auto;
+            min-height: 50px;
+            height:auto!important;
+            height:50px;
+            line-height:50px;
+            position: relative;
+            top:15px;
+        }
+        #infor{
+            width:595px;
+            margin:0 auto;
+            color:rgba(153,153,153,1);
+            height:50px;
+            line-height:50px;
+            border-bottom:1px solid #ccc;
+            position: relative;
+            top:10px;
+        }
+        #infor a{
+            text-decoration: none;
+            color:rgba(153,153,153,1);
+        }
+        #times{
+            margin-right:50px;
+        }
+        #cont{
+            width:595px;
+            margin:0 auto;
+            margin-top:30px;
+            -webkit-box-flex: 1;
+            overflow: auto;
+        }
+        #cont img{
+            width:560px;
+            margin:0 auto 20px;
+            display: block;
+        }
+        #cont p{
+        	margin-bottom: 15px;
+        	text-indent: 2em;
+        	font-size: 24px;
+        	line-height: 28px;
+        }
+    </style>
+</head>
+<body>
+    <div id="contain">
+        <!--<div id="title"><h1>此设备只有巴掌大小：却是解放军真正关键之处</h1></div>
+        <div id="infor">
+            <span id="times">2016-10-06 10:06</span>
+            <a href="###">来源:<span id="form">七夜军事</span></a>
+        </div>
+        <div id="cont">
+            <img src="img/pic0.jpeg" id="pics">
+            <div id="words">
+	            <p>有一种观点认为，现在是空、海、天的时代，坦克已经没落了。这种观点有失偏颇。在局部战争或接壤国家的战争中，重型机械化部队仍是拳头部队。值得自豪的是，谈起坦克，中国99A可以和美国M1、德国豹2列为前三甲。因为有了99式，中国重型机械化部队在亚洲首屈一指，在世界上也属于一流。</p>
+	            <p>99式强在哪里？三个方面都有故事</p>
+	            <p>根据外媒报道，中国共有约500辆99式坦克服役，其中有124辆的99A型坦克。99式坦克的性能参数与西方顶级设计相当，而且还有自己的一些独特之处。</p>
+	            <p>火力强大。中国已经为99A的125毫米火炮研制了特种炮弹，据称能够在1.4公里内穿透M1坦克的装甲防护。据悉，运动中首发命中率不低于85%，只要被锁定基本上就会别摧毁。</p>
+	            <p>在今年夏天的一次演习中，38集团军某机步师在无人机、武装直升机和防空火力的配合下，演练了“随遇破袭”战法——部队在保持行进状态时，不专门大规模展开，而对非正面遭遇的敌人进行进攻和反击。也就是说，对着主要目标而去，在路上遇到谁打谁，谁挡打谁，边走边打，一路横扫。该师配属的99A型主战坦克在遭遇蓝军时没有任何的短停或犹豫，一边前进，一边调转炮口，在移动中射击，在武装直升机的支援下摧毁目标。</p>
+	            <p>在一场坦克实弹射击演练中，99式坦克还创造了一发穿甲弹击穿两辆坦克的奇迹。</p>
+	            <p>防护措施强大。最值得肯定的是激光压制系统，对反坦克导弹形成制导压制，想要瞄准都比较难。这是世界上第一种列装的激光压制系统，有效距离达到4公里。</p>
+	            <p>这套激光压制系统，一旦探测到敌方坦克或反坦克导弹的测距激光束后，系统会自动发出报警信号，同时向敌方所在的方位发射出一束较弱的激光，以确定敌人的准确位置，然后激光束会瞬间增强，足以摧毁敌光电设备，甚至直接伤及操纵手的眼睛。它甚至拥有主动侦察的能力，也就是主动发出低能量脉冲对可疑区域实施扫描，一旦识别出对方观瞄仪器镜头所反射回的微光便自动开火将其摧毁。</p>
+	            <p>在2013年的一次演练中，99式坦克全程全向搜索目标，从发现目标到火炮出膛平均只需9秒，在1.5公里距离行进间完成6个波次的射击。</p>
+	            <p>机动能力强大。99A坦克具备手动挡和自动挡操纵系统，让50余吨重的坦克实现了自动换挡，并通过方向盘以任意半径连续转向甚至原地转向。这种技术与过去坦克只能使用操纵杆操作形成鲜明对比，它让驾驶坦克如同开小轿车，对驾驶员的体力要求降低，提高了坦克连续作战的能力和机动性。</p>
+	            <p>99式如何发威？装甲合成营横扫传统摩步旅</p>
+	            <p>当然，无论99式多么强大，要发挥其威力，肯定不能单打独斗。第38集团军装甲合成营在“和平使命-2014”上亮相，辖1个坦克连，3个装甲步兵连，1个营属炮兵连，1个上级加强的团属自行榴炮连和1个师属自行加农榴弹炮连，1个自行高炮连，1个装甲仪器侦察排，1个装甲工兵排。如此火力配置，可以打垮传统的摩托化步兵旅。</p>
+	            <p>美国著名军事网站“华盛顿自由灯塔”的分析文章认为，第38集团军的某机械化步兵师，可以在战时组成4个重型装甲合成营和4个装甲步兵合成营，直接加强122毫米榴弹炮、红箭-10反坦克导弹，以及自行高炮和地空导弹系统，所有战车都配备作战信息终端、北斗卫星定位系统和电子作战地图，能够实施网络化条件下的指挥控制和精确火力打击。其战斗力比肩美国同类部队。</p>
+	        </div>
+        </div>-->
+    </div>
+</body>
+<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+<script type="text/javascript" src="js/zepto_1.1.3.js" ></script>
+<!--<script src="js/zepto.js"></script>
+<script src="js/iscroll.js"></script>
+<script src="js/touch.js"></script>-->
+
+<script>
+    window.onload=window.onresize=function(){
+    	
+        bodyScale();
+//      var myScroll=new IScroll("#cont");
+    }
+    function bodyScale(){
+        var devicewidth=document.documentElement.clientWidth;
+        var scale=devicewidth/640;
+        document.body.style.zoom=scale;
+    }
+	
+	$(function(){
+		$.ajax({
+			url:"news.json",
+			dataType:"json",
+			success:function(data){
+				//console.log(data);
+				var i=Math.floor(Math.random()*10);
+				console.log(i);
+				var str="<div id='title'><h1>"+data[i].title+"</h1></div><div id='infor'><span id='times'>"
+				+data[i].times+"</span><a href='###'>来源:<span id='form'>"+data[i].from+
+				"</span></a></div><div id='cont'><img src='"+data[i].img+"' id='pics'><div id='words'>"+
+				data[i].inside+"</div></div>";
+				$("#contain").html(str);
+			}
+			
+		})
+	})
+    
+</script>
+</html>

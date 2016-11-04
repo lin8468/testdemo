@@ -1,0 +1,80 @@
+	*{margin: 0;padding: 0;}
+	body,html{width: 100%;height: 100%;}
+	.myself{width: 640px;height: 100%;overflow: hidden;}
+	.my,.my_main{width: 640px;height: 100%;}
+	.my_one{background:url(images/hua.jpg) 0 0 no-repeat;background-size:cover;}
+	.pink_bg{position: relative;}
+	.img11{width:868px;height:300px;transform:rotate(-30deg);position: absolute;top:-80px;left: -280px;}
+	.img12{width:868px;height:500px;transform:rotate(-30deg);position: absolute;top:800px;left: -580px;}
+	.img13{width:868px;height:500px;transform:rotate(-30deg);position: absolute;top:1100px;left: -180px;}
+	.xian_bg{position: relative;}
+	.img14{width:280px ;transform:rotate(-30deg);position: absolute;top:650px;left: 140px;}
+	.img15{width:280px ;transform:rotate(-30deg);position: absolute;top:510px;left: 380px;}
+	.img16{width:330px ;transform:rotate(60deg);position: absolute;top:875px;left: 90px;}
+	.words{transform:rotate(-30deg);font-size: 80px;font-weight: 600;position:absolute;top:200px;left: 200px}
+	.words2{transform:rotate(-30deg);font-size: 50px;font-weight: 600;position:absolute;top:570px;left: 110px}
+	.words3{transform:rotate(-30deg);font-size: 50px;font-weight: 600;position:absolute;top:740px;left: 220px}
+	.my_two{background-size: cover;}
+	.two-top{position: relative;}
+	.img21{width: 640px;height: 400px;opacity: .5}
+	.img22{width: 300px;height: 300px;border-radius: 50%;position: absolute;top:270px;left: 200px;background: #fff;}
+	.img23{width: 300px;height: 300px;border-radius: 50%;position: absolute;top:270px;left: 200px;width:300px;height: 300px; }
+	.two-bottom{position: relative;}
+	.img24{position: absolute;left: 100px;top:200px;}
+	.img25{position: absolute;left: 100px;top:300px;}
+	.img26{position: absolute;left: 100px;top:400px;}
+	.my_three{background:url(images/bj4.jpg);background-size: cover;position: relative;}
+	
+	.img31{position: absolute;bottom: 100px;left: 30%;font-size: 50px;}
+	.imgleft{width:210px;height: 600px;background: #666;border-radius: 10%;margin:150px 0 0 0;float: left;font-size: 40px;color:#fff;}
+	.img33{width:210px;height: 210px;border-radius: 30%;position: absolute;top:540px;left:0px;z-index:20;}
+	.imgmiddle{width:210px;height: 600px;background: #666;border-radius: 10%;margin:150px 0 0 0;float: left;font-size: 40px;color:#fff;}
+	.img34{width:210px;height: 210px;border-radius: 30%;position: absolute;top:540px;left:210px;z-index:20}
+	.imgright{width:210px;height: 600px;background: #666;border-radius: 10%;margin:150px 0 0 0;float: left;font-size: 40px;color:#fff;}
+	.img35{width:210px;height: 210px;border-radius: 30%;position: absolute;top:540px;left:420px;z-index:20}
+	.my_four{background:url(images/ff.jpg);background-size: cover;position: relative;}
+	.img41{width: 640px;height: 100%}
+	.words4{position: absolute;top:100px;left: 35%;font-size: 50px;font-weight: 600}
+	.img42{position: absolute;top:200px;left: 10%;width: 500px;}
+	.flower{width: 640px;height: 950px;position: absolute;top: 170px;transform:rotate(30deg);opacity:0.2;}
+	/*@keyframes ff{
+		0%{transform:scale(0);}
+		100%{transform:scale(1.5);}
+	}
+	.ff{animation:ff 2s linear 5s infinite;}*/
+	.fourone{position: absolute;left: 100px;bottom: 200px;}
+	.fourtwo{position: absolute;left: 100px;bottom: 307px;}
+	.fourthree{position: absolute;left: 100px;bottom: 414px;}
+
+	.fourfour{position: absolute;left: 100px;bottom: 521px;}
+	.fourSpan{display:inline-block;width: 300px;height: 107px;background: #ccc;opacity: .5;text-align: left;line-height: 107px;position: relative;top:-50px;}
+	.my_five{background:url(images/mei2.jpg);background-size: cover;position: relative;perspective:1000px;}
+	.my_five ul{width: 600px;height: 800px;transform-style:preserve-3d;position: relative;margin: 160px 0 0 20px;
+	animation:move1 10s linear infinite;
+	}
+	.my_five li{width: 600px;height:800px;list-style: none;position: absolute;}
+	.my_five li img{width:100%;height:100%;}
+	.my_five li:nth-child(1){transform:translateZ(300px);}
+	.my_five li:nth-child(2){transform:rotateY(180deg) translateZ(300px);}
+	.my_five li:nth-child(3){transform:rotateY(90deg) translateZ(300px);}
+	.my_five li:nth-child(4){transform:rotateY(-90deg) translateZ(300px);}
+	.my_five li img{width: 600px;height:800px;}
+	@keyframes move1{
+		0%{transform:rotateY(0deg);}
+		10%{transform:rotateY(90deg);}
+	
+		25%{transform:rotateY(90deg);}
+		35%{transform:rotateY(180deg);}
+	
+		50%{transform:rotateY(180deg);}
+		60%{transform:rotateY(270deg);}
+	
+		75%{transform:rotateY(270deg);}
+		85%{transform:rotateY(360deg);}
+		
+		100%{transform:rotateY(360deg);}
+	}
+	
+	
+	/*.my_five .kk{animation:move 2s linear;}*/
+	

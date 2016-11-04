@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+    defaultConfig {
+        applicationId "wonderful.com.oneminute"
+        minSdkVersion 14
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(':TuSDK-for-Android-2.5.1')
+    compile files('libs/fastjson-1.2.17.jar')
+    compile files('src/main/jniLibs/BaiduLBS_Android.jar')
+    compile 'com.squareup.picasso:picasso:2.3.2'
+    testCompile 'junit:junit:4.12'
+    compile files('src/main/jniLibs/mta-sdk-1.6.2.jar')
+    compile files('src/main/jniLibs/SocialSDK_QQZone_3.jar')
+    compile files('src/main/jniLibs/open_sdk_r5756_lite.jar')
+    compile files('src/main/jniLibs/SocialSDK_Sina.jar')
+    compile files('src/main/jniLibs/umeng_social_apiv6.0.0.jar')
+    compile files('src/main/jniLibs/umeng_social_netv6.0.0.jar')
+    compile files('src/main/jniLibs/umeng_social_viewv6.0.0.jar')
+    compile files('src/main/jniLibs/weiboSDKCore_3.1.4.jar')
+}

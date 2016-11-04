@@ -1,0 +1,115 @@
+	*{margin: 0;padding: 0;}
+	body,html{width: 100%;height: 100%;}
+	.myself{width: 640px;height: 100%;overflow: hidden;}
+	.my,.my_main{width: 640px;height: 100%;}
+	.my_one{background:url(images/hua.jpg) 0 0 no-repeat;background-size:cover;}
+	.pink_bg{position: relative;}
+	.img11{width:868px;height:300px;transform:rotate(-30deg);position: absolute;top:-80px;left: -280px;}
+	.img12{width:868px;height:500px;transform:rotate(-30deg);position: absolute;top:800px;left: -580px;}
+	.img13{width:868px;height:500px;transform:rotate(-30deg);position: absolute;top:1100px;left: -180px;}
+	.xian_bg{position: relative;}
+	.img14{width:280px ;transform:rotate(-30deg);position: absolute;top:650px;left: 140px;}
+	.img15{width:280px ;transform:rotate(-30deg);position: absolute;top:510px;left: 380px;}
+	.img16{width:330px ;transform:rotate(60deg);position: absolute;top:875px;left: 90px;}
+	.words{transform:rotate(-30deg);font-size: 80px;font-weight: 600;position:absolute;top:200px;left: 200px}
+	.words2{transform:rotate(-30deg);font-size: 50px;font-weight: 600;position:absolute;top:570px;left: 110px}
+	.words3{transform:rotate(-30deg);font-size: 50px;font-weight: 600;position:absolute;top:740px;left: 220px}
+	.my_two{background-size: cover;}
+	.two-top{position: relative;}
+	.img21{width: 640px;height: 400px;opacity: .5}
+	.img22{width: 300px;height: 300px;border-radius: 50%;position: absolute;top:270px;left: 200px;background: #fff;}
+	.img23{width: 300px;height: 300px;border-radius: 50%;position: absolute;top:270px;left: 200px;width:300px;height: 300px; }
+	.two-bottom{position: relative;}
+	.img24{position: absolute;left: 100px;top:200px;}
+	.img25{position: absolute;left: 100px;top:300px;}
+	.img26{position: absolute;left: 100px;top:400px;}
+	.my_three{background:url(images/ee.jpg);background-size: cover;position: relative;}
+	
+	.img31{position: absolute;top: 120px;left: 30%;font-size: 58px;}
+	.img32{position: absolute;top: 70px;left: 36%;width: 150px;height: 150px;animation:move3 2s linear infinite;}
+	.img34{position: absolute;top: 210px;left: 7%;width: 400px;height: 280px}
+	.img35{position: absolute;top: 480px;right: 7%;width: 400px;height: 280px}
+	.img36{position: absolute;top: 740px;left: 7%;width: 400px;height: 280px}
+	.img37{position: absolute;top: 230px;left: 9%;width: 300px;height: 220px}
+	.img38{position: absolute;top: 500px;right: 17%;width: 300px;height: 220px}
+	.img39{position: absolute;top: 760px;left: 9%;width: 300px;height: 220px}
+	.word31{position: absolute;top: 310px;left: 61%;width: 20px;font-size: 30px}
+	.word32{position: absolute;top: 580px;right: 11%;width: 20px;font-size: 30px}
+	.word33{position: absolute;top: 840px;left: 61%;width: 20px;font-size: 30px}
+	.my_four{background:url(images/ff.jpg);background-size: cover;position: relative;}
+	.img41{width: 640px;height: 100%}
+	.words4{position: absolute;top:100px;left: 35%;font-size: 50px;font-weight: 600}
+	.img42{position: absolute;top:200px;left: 10%;width: 500px;}
+	.flower{width: 640px;height: 950px;position: absolute;top: 170px;transform:rotate(30deg);opacity:0.2;}
+	@keyframes move3{
+		0%{transform:rotate(0deg);}
+		100%{transform:rotate(360deg);}
+	}
+	.fourone{position: absolute;left: 100px;bottom: 200px;}
+	.fourtwo{position: absolute;left: 100px;bottom: 307px;}
+	.fourthree{position: absolute;left: 100px;bottom: 414px;}
+
+	.fourfour{position: absolute;left: 100px;bottom: 521px;}
+	.fourSpan{display:inline-block;width: 300px;height: 107px;background: #ccc;opacity: .5;text-align: left;line-height: 107px;position: relative;top:-50px;}
+	.my_five{background:url(images/ccg.jpg);background-size: cover;position: relative;perspective:1000px;}
+	.my_five h2{font-size: 50px;position: absolute;top:900px;left: 37%;}
+	.my_five ul{width: 400px;height: 85%;transform-style:preserve-3d;position: relative;margin: 250px 0 0 120px;animation:move5 10s linear infinite;}
+	.my_five li{width: 400px;height: 85%;list-style: none;position: absolute;}
+	.my_five li:nth-child(1){transform:translateZ(200px);}
+	.my_five li:nth-child(2){transform:rotateY(180deg) translateZ(200px);}
+	.my_five li:nth-child(3){transform:rotateY(90deg) translateZ(200px);}
+	.my_five li:nth-child(4){transform:rotateY(-90deg) translateZ(200px);}
+	.my_five li img{width: 400px;height: 85%;}
+	@keyframes move5{
+    0%{transform:rotateY(0deg);}
+    10%{transform:rotateY(90deg);}
+  
+    25%{transform:rotateY(90deg);}
+    35%{transform:rotateY(180deg);}
+  
+    50%{transform:rotateY(180deg);}
+    60%{transform:rotateY(270deg);}
+  
+    75%{transform:rotateY(270deg);}
+    85%{transform:rotateY(360deg);}
+    
+    100%{transform:rotateY(360deg);}
+  	}
+
+	/*.move5{
+	  -webkit-animation-name: move5;
+	  animation-name: move5;
+	   
+	}*/
+
+	.my_six{background:url(images/rr.jpg);background-size: cover;position: relative;position: relative;}
+	.img61,.img62,.img63{width: 640px;height: 33.5%;}
+	.img61{position: absolute;top: 0%;left: 0px;}
+	.img62{position: absolute;top: 33.3%;left: 0px;}
+	.img63{position: absolute;top: 66.6%;left: 0px;}
+	.word61{position: absolute;top: 45%;left: 35%;font-size: 70px;}
+	.my_six ul{position: absolute;top: 30px;left: 10%}
+	.my_six li{height: 100px;width: 100%;margin-top: 70px;font-size: 36px;list-style: none;}
+	.my_six ul img{width: 100px;height:100px;margin-left: 50px;display: inline-block;}
+	
+
+	.my_seven{background:url(images/11.jpg);background-size: cover;}
+	.my_seven li{position: relative;font-size: 34px;}
+	.img71{position: absolute;top: 100px;left: 20px;opacity: 0;}
+	.img72{position: absolute;top: 250px;left: 410px;opacity: 0;}
+	.img73{position: absolute;top: 500px;left: 20px;opacity: 0;}
+	.img74{position: absolute;top: 650px;left: 450px;opacity:0;}
+	.my_seven li span{position: absolute;width: 420px;}
+	.word71{top: 100px;left: 200px;}
+	.word72{top: 280px;right: 200px;}
+	.word73{top: 500px;left: 200px;}
+	.word74{top: 680px;right: 200px;}
+	.my_seven li em{position: absolute;width: 30px;}
+	.em71{top: 150px;left: 100px}
+	.em72{top: 300px;right: 120px}
+	.em73{top: 550px;left: 80px}
+	.em74{top: 700px;right: 100px}
+
+
+
+	.my_eight{background:url(images/bj6.jpg);background-size: cover;position: relative;}

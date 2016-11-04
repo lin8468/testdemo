@@ -1,0 +1,64 @@
+
+*{
+	margin: 0;
+	padding: 0;
+}
+body,html{
+	width: 100%;
+	height: 100%;
+	background:#eee;
+}
+.content{
+	width: 640px;
+	height: 100%;
+	position: relative;
+	margin:0 auto;
+	overflow: hidden;
+}
+.cat{
+	width: 640px;
+	height: 100%;
+}
+.drink{
+	position:absolute;
+	width: 15%;
+	height: 15%;
+	top: 10%;
+	left: 5%;
+	
+}
+.eat{
+	position: absolute;
+	width: 15%;
+	height: 15%;
+	top: 25%;
+	left: 5%;
+}
+.cymbal{
+	position: absolute;
+	width: 15%;
+	height: 15%;
+	top: 40%;
+	left: 5%;
+}
+.fart{
+	position: absolute;
+	width: 15%;
+	height: 15%;
+	top: 55%;
+	left: 5%;
+}
+.pie{
+	position: absolute;
+	width: 15%;
+	height: 15%;
+	top: 70%;
+	left: 5%;
+}
+.scratch{
+	position: absolute;
+	width: 15%;
+	height: 15%;
+	top: 85%;
+	left: 5%;
+}

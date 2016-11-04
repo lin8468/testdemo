@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/OneMinute.iml" filepath="$PROJECT_DIR$/OneMinute.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TuSDK-for-Android-2.5.1/TuSDK-for-Android-2.5.1.iml" filepath="$PROJECT_DIR$/TuSDK-for-Android-2.5.1/TuSDK-for-Android-2.5.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oneminute/oneminute.iml" filepath="$PROJECT_DIR$/oneminute/oneminute.iml" />
+    </modules>
+  </component>
+</project>

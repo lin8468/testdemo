@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_life"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="创意生活"
+        android:textSize="75px" />
+
+
+    <WebView
+        android:id="@+id/life_webview"
+        android:layout_width="match_parent"
+        android:layout_height="350dp" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#00ffffff"
+        android:gravity="center"
+        android:onClick="next"
+        android:text="更多..." />
+
+
+</LinearLayout>

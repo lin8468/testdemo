@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/main_FrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/main_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
+
+            <ImageButton
+                android:id="@+id/main_imageButton"
+                android:layout_width="210dp"
+                android:layout_height="140dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/main_button_off"
+                android:onClick="start"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/main_textView_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="100dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="textView"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/main_textView_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/main_textView_1"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="textView"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/main_textView_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/main_textView_1"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="50dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="textView"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/main_textView_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="120dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="textView"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/main_textView_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/main_textView_2"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="40dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="textView"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/main_textView_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/main_imageButton"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="textView"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/main_textView_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/main_textView_6"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="50dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="textView"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/main_textView_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/main_imageButton"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="70dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="textView"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/main_textView_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/main_textView_6"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="textView"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/main_textView_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/main_textView_9"
+                android:layout_below="@+id/main_textView_9"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="50dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="click"
+                android:text="textView"
+                android:textColor="#fff" />
+
+            <Button
+                android:id="@+id/drawerButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/main_setting"
+                android:onClick="openDrawerLayout" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/rightDrawer"
+        android:layout_width="260dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/drawerBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:layout_width="260dp"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/fragment1"
+                android:layout_width="100dp"
+                android:layout_height="130dp"
+                android:layout_alignBaseline="@+id/fragment2"
+                android:layout_alignBottom="@+id/fragment2"
+                android:layout_alignLeft="@+id/fragment3"
+                android:layout_alignStart="@+id/fragment3">
+
+                <TextView
+                    android:id="@+id/aboutUsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/aboutUsButton"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="9px"
+                    android:text="关于我们" />
+
+                <Button
+                    android:id="@+id/aboutUsButton"
+                    android:layout_width="85px"
+                    android:layout_height="117px"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/drawerlayout_about_us"
+                    android:gravity="center_vertical"
+                    android:onClick="AboutUs" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fragment2"
+                android:layout_width="100dp"
+                android:layout_height="130dp"
+                android:layout_alignLeft="@+id/fragment4"
+                android:layout_alignStart="@+id/fragment4"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/suggestText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/suggestButton"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="9px"
+                    android:text="您的意见" />
+
+                <Button
+                    android:id="@+id/suggestButton"
+                    android:layout_width="48px"
+                    android:layout_height="115px"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/drawerlayout_suggest"
+                    android:gravity="center_vertical"
+                    android:onClick="Suggest" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fragment3"
+                android:layout_width="100dp"
+                android:layout_height="130dp"
+                android:layout_alignBaseline="@+id/fragment4"
+                android:layout_alignBottom="@+id/fragment4"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="17dp"
+                android:layout_marginRight="17dp">
+
+                <Button
+                    android:id="@+id/shareButton"
+                    android:layout_width="135px"
+                    android:layout_height="91px"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/drawerlayout_share"
+                    android:gravity="center_vertical"
+                    android:onClick="Share" />
+
+                <TextView
+                    android:id="@+id/shareText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/shareButton"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:text="分享我们" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fragment4"
+                android:layout_width="100dp"
+                android:layout_height="130dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/logo"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="39dp">
+
+                <Button
+                    android:id="@+id/nightModeButton"
+                    android:layout_width="134px"
+                    android:layout_height="94px"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/drawerlayout_nightmode"
+                    android:gravity="center_vertical"
+                    android:onClick="NightMode" />
+
+                <TextView
+                    android:id="@+id/nightModeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nightModeButton"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:text="夜间模式" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/drawerlayout_logo" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,290 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>猜拳游戏</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no" />
+		<style>
+			*{
+				margin:0px;
+				padding:0px;
+				font-family:'迷你简卡通';
+			}
+			body,html{
+				width:100%;
+				height:100%;
+				background-color:rgba(253, 217, 227,.2);
+				/*font-size: 20px;*/
+				overflow: hidden;
+			}
+			ul{
+				list-style:none;
+			}
+			#container{
+				width:640px;
+				height:600px;
+				margin: 50px auto 0;	
+			}
+			#container ul{
+				width:100%;
+				height:62%;
+			}
+			#container ul li{
+				width:50%;
+				height:100%;
+				float:left;
+				text-align:center;
+			}
+			#container ul li div{
+				width:223px;
+				height:337px;
+				margin:auto;
+				border-radius:50%;
+				border:10px solid rgb(254, 123, 163);
+				background-position:center;
+				background-repeat:no-repeat;
+			}
+			#container ul li p{
+				margin:10px 0px;
+				font-size:40px;
+				
+			}
+			#container ul li div.user{
+				background-image:url('img/readyl.png');
+			}
+			#container ul li div.computer{
+				background-image:url('img/readyr.png');
+			}
+			#container ul li div.guess0,#switch li div.guess0{
+				background-image:url('img/1.png');
+			}
+			#container ul li div.guess1,#switch li div.guess1{
+				background-image:url('img/2.png');
+			}
+			#container ul li div.guess2,#switch li div.guess2{
+				background-image:url('img/3.png');
+			}
+			#container div.play{
+				text-align:center;
+				margin-top: 40px;
+			}
+			#container div.play button{
+				border:10px solid rgb(254, 123, 163);
+				border-radius:50%;
+				outline:none;
+				background-color:rgb(253, 217, 227);
+				height:140px;
+				width:335px;
+				font-size:36px;
+				font-weight:bold;
+				color:rgb(134, 123, 117);
+				cursor:pointer;
+			}
+			#container div.play button.disabled{
+				border:10px solid #bbb;
+				color:#bbb;
+			}
+			#container div.play button:hover{
+				border-color:red;
+				font-size:34px;
+				color:rgb(51, 43, 41);
+			}
+			#container div.play button.disabled:hover{
+				border:10px solid #bbb;
+				font-size:24px;
+				color:#bbb;
+			}
+			#switch{
+				position:fixed;
+				top:580px;
+				left:0px;
+				bottom:0px;
+				display:none;
+			}
+			#switch li{
+				width:200px;
+				height:28%;
+				margin-bottom: 20px;
+				border-radius:50%;
+				border:10px solid rgb(254, 123, 163);
+				cursor:pointer;
+			}
+			#switch li:hover{
+				background-color:rgb(254, 123, 163);
+			}
+			#switch li div{
+				width:100%;
+				height:100%;
+				text-align:center;
+				font-size:40px;
+				background-position:center;
+				background-repeat:no-repeat;
+			}
+			#result{
+				font-size:50px;
+				text-align:center;
+				width:100%;
+			}
+			#dis{
+				width: 70%;
+				text-indent: 2em;
+				line-height:60px ;
+				border:6px solid rgb(254, 123, 163);;
+				position: relative;
+				top: 160px;
+				left: 15%;
+				font-size: 36px;
+				padding:10px;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<ul>
+				<li>
+					<p id="userName">我</p>
+					<div class="user animate"></div>
+				</li>
+				<li>
+					<p id="compName">电脑</p>
+					<div class="computer animate"></div>
+				</li>
+			</ul>
+			<div class="play">
+				<button id="opbtn" onclick = "game.play();">试试运气</button>
+				<br/><br/><br/>
+				<div id="result"></div>
+			</div>
+		</div>
+		<ul id="switch">
+			<li>
+				<div class="guess0" onclick = "game.verdict(0)">石头</div>
+			</li>
+			<li>
+				<div class="guess1" onclick = "game.verdict(1)">剪刀</div>
+			</li>
+			<li>
+				<div class="guess2" onclick = "game.verdict(2)">布</div>
+			</li>
+		</ul>
+		<div id="dis"></div>
+		<script type="text/javascript">
+			function bodyScale(){
+				var devicewidth=document.documentElement.clientWidth;
+				var scale=devicewidth/900;
+				document.body.style.zoom=scale;
+			}
+			window.onload=window.onresize=function(){
+				bodyScale();
+			}
+	</script>
+		<script>
+			Function.prototype.extends = function(Clazz,extend){
+				for(var prop in Clazz.prototype){
+					this.prototype[prop] = Clazz.prototype[prop];
+				}
+				for(var prop in extend){
+					this.prototype[prop] = extend[prop];
+				}
+			}
+			function Player(name){
+				this.name = name;
+			}
+			Player.prototype.guess = function(){}
+			Player.prototype.draw = function(){}
+
+			function User(name){
+				Player.call(this,name);
+			}
+			User.extends(Player,{
+				guess : function(point){
+					return this.point = point;
+				}
+			});
+
+			function Comp(name){
+				Player.call(this,name);
+			}
+			Comp.extends(Player,{
+				guess : function(){
+					return this.point = (Math.random()*1000<<0)%3;
+				}
+			});
+			function GuessGame(user,comp){
+				this.user = user;
+				this.comp = comp;
+				this.init();
+			}
+			GuessGame.prototype.init = function(){
+				document.getElementById('userName').innerText = '我：'+this.user.name;
+				document.getElementById('compName').innerText = '电脑：'+this.comp.name;	
+			}
+			GuessGame.prototype.play = function(){
+				this.start();
+				this.startAnimate();
+				dis.style.display="none";
+			}
+			GuessGame.prototype.start = function(){
+				document.getElementById('result').innerHTML = '';
+				var opbtn = document.getElementById('opbtn');
+				opbtn.className = 'disabled';
+				opbtn.innerText = '运气正在路上...';
+				opbtn.disabled = true;
+				document.getElementById('switch').style.display='block';
+			}
+			GuessGame.prototype.end = function(){
+				var opbtn = document.getElementById('opbtn');
+				opbtn.className = '';
+				opbtn.innerHTML = '再来一次';
+				opbtn.disabled = false;
+				document.getElementById('switch').style.display='none';
+				window.clearInterval(this._interval);
+			}
+			GuessGame.prototype.startAnimate = function(){
+				var animats = document.getElementsByClassName('animate');
+				var serial = 0;
+				this._interval = window.setInterval(function(){
+					animats[0].className = "user animate guess"+(serial++)%3;
+					animats[1].className = "user animate guess"+(serial++)%3;
+				},200);
+			}
+			GuessGame.prototype.verdict = function(point){
+				var animats = document.getElementsByClassName('animate');
+				animats[0].className = "user animate guess"+this.user.guess(point);
+				animats[1].className = "user animate guess"+this.comp.guess();
+				var res = this.user.point - this.comp.point;
+				var result = document.getElementById('result');
+				var dis = document.getElementById('dis');
+				switch(res){
+					case 0:
+						result.innerText = '平局,天才傻瓜完美组合!';
+						dis.style.display="block";
+						dis.innerText='今天的最大拥有不该是别的什么东西，而应当是快乐，珍惜今天的拥有就是要享受今天的快乐。快乐是内心的感受，幸福是快乐的积累，今天的生活就该是一种真实的快乐。今天的我是快乐的，因为我享受着生活带给我的快乐。今天的快乐是明天的幸福回忆，当明天成为今天时，同样会有新的快乐。珍惜今天的拥有，享受人生快乐。';
+						break;
+					case 1:
+					case -2:
+						result.innerText = '运气还在路上,继续努力!';
+						dis.style.display="block";
+						dis.innerText='保持好的心态比拥有好的环境更重要，一种美好的心情要比十副良药更能解除生理上的疲惫和病理上的痛苦。今天虽然你努力了，但是你还可以拼尽全力。你如果不足够好，那么凭什么能吸引到更好的人呢。如果想要遇到更好的人，是不是也要在成为更好的人的路上呢。所以，不要再抱怨运气，好的坏的，其实皆有因果。加油，没有最好只有更好！';
+						break;
+					case -1:
+					case 2:
+						result.innerText = 'Yea~,今天会有意外的惊喜呦！';
+						dis.style.display="block";
+						dis.innerText='今天的你心情好，工作学习也将有大的进展，也会有积极地态度面对身边的人。人生多舛，生命多磨，此乃你我之幸，庆幸如此，否难有阅历，历阅成败，晋升智慧，开阔视野，扩展境界。感恩生命的失败，让我们懂得了坚强；感恩生命的失败，让我们懂得了容忍；感恩生命的失败，让我们懂得了未来。坚持吧，你的好运气会让你的 一天更加精彩。';
+						break;
+					default:
+						result.innerText = res;
+				}
+				this.end();
+			}
+
+			var user = new User('天才');
+			var comp = new Comp('傻瓜');
+			var game = new GuessGame(user,comp);
+		</script>
+	</body>
+</html>

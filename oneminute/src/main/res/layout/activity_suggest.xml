@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_suggest"
+    android:layout_width="334dp"
+    android:layout_height="198dp"
+    tools:context="wonderful.com.oneminute.activity.SuggestActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_margin="20dp"
+            android:text="写下您的宝贵意见，我们日后定会改进"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/suggest_editText"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:ems="20"
+            android:gravity="center_horizontal"
+            android:hint="请写下您的意见和建议"
+            android:inputType="text"
+            android:minLines="5" />
+
+        <Button
+            android:id="@+id/suggestCommit"
+            android:layout_width="39dp"
+            android:layout_height="21dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="suggestCommit"
+            android:background="@drawable/suggest_commit" />
+
+    </LinearLayout>
+
+</RelativeLayout>
